@@ -14,18 +14,19 @@
 
 import zhCN from './zh-CN.json'
 import enUS from './en-US.json'
-
+import viVN from './vi-VN.json'
 const locales = {
-  'zh-CN': zhCN,
-  'en-US': enUS
+    'zh-CN': zhCN,
+    'en-US': enUS,
+    'vi-VN': viVN
 }
 
-export function load (key: string, ls: any) {
-  // @ts-expect-error
-  locales[key] = ls
+export function load(key: string, ls: any) {
+    // @ts-expect-error
+    locales[key] = ls
 }
 
 export default (key: string, locale: string) => {
-  // @ts-expect-error
-  return locales[locale]?.[key] ?? key
+    // @ts-expect-error
+    return locales[locale]?.[key] ?? key
 }
